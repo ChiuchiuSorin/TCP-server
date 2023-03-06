@@ -52,7 +52,6 @@ Teoria controlului congestiei a fost introdusă de Frank Kelly, care a aplicat t
 
 In prezent, cea mai larg folosita solutie pentru problema congestiilor este protocolul TCP care administreaza fluxuri intre 2 calculatoare.
 
-![](RackMultipart20230306-1-uyux7l_html_32fc1e2d067ead1b.png)
 
 **TCP**
 
@@ -108,7 +107,7 @@ Pachetele TCP sunt foarte complexe și încorporează mai multe mecanisme pentru
 
 **TCP Tahoe** foloseste 3 mecanisme pentru controlul congestiei : slow start , congestion avoidance si fast retransmit
 
-1. **Slow start phase**
+**1) Slow start phase**
 
 In aceasta faza, TCP Tahoe se foloseste de o crestere exponentiala a variabilei CWND (fereastra de congestie) pentru trimiterea de pachete. CWND creste pana ajunge la valoarea de threshold (SSThresHold) care reprezinta marimea ferestrei pe care TCP o considera **s**** igura**, iar dupa, incepe al 2-lea mecanism al acestui algoritm.
 
@@ -158,7 +157,7 @@ Conceptul de timeout , in acest caz , se refera la asteptarea indelungata a unui
 
 Acest mecanism se refera la detectia unei pierderi de pachete prin primirea de confirmari duplicate.Atunci cand se primesc 3 confirmari care sunt identice , TCP retransmite pachetul pierdut , fara sa mai astepte timeout. Apoi , incepe din nou partea de slow start .
 
-1. **Solutia** **noastra**
+**3. Solutia noastra**
 
 Pentru rezolvarea implementarii protocolului TCP, s-au folosit 2 scripturi pentru fereastra de transmitere si cea de primire (transmitator.py si receptor.py), cat si implementarea unei clase pentru pachete(package.py).
 
@@ -170,7 +169,7 @@ Se asteapta conectarea receptorului (simularea unui server care asteapta conecta
 
 In cadrul scriptului de receptie, se vor primi pachetele, se vor prelucra si se vor trimite confirmarile acestora catre transmitator. Pe baza unei probabilitati se va simula o eroare de receptie(trimiterea unei confirmari gresite), in cazul a 3 astfel de erori la acelasi pachet, procesul de primire se opreste pentru pachetele curente receptionate si neprelucrate. In cazul unei primiri corecte, continutul, in functie de numarul de secventa al pachetului, se va adauga intr-o lista, pe baza careia la finalul receptiei se va alcatui fisierul primit.
 
-1. **Bibliografie**
+**4. Bibliografie**
 
 [Intro to Congestion Control (squidarth.com)](https://squidarth.com/rc/programming/networking/2018/07/18/intro-congestion.html)
 
