@@ -33,7 +33,8 @@ Prof. Nicolae-Alexandru Botezatu
 3. Solutia noastra
 4. Bibliografie
 
-1. **Descriere**
+
+**1. Descriere**
 
 **Transmiterea de pachete**
 
